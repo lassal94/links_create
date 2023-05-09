@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'links/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <table class="head">
+            <tr>
+                <th id="logo"><p>LinksCreator</p></th>
+                <th id="lst">
+                    <ul>
+                        <li><a class = "menu" href="{% url 'home' %}">Главная</a></li>
+                        <li><a class = "menu" href="{% url 'contacts' %}">Про нас</a></li>
+                        {% if not user.is_authenticated %} 
+                            <li><a class = "menu" href="{% url 'auth' %}">Войти</a></li>
+                            <li><a class="menu" href="{% url 'reg' %}">Регистрация</a></li>
+                        {% else %} 
+                            <li><a class = "menu" href="{% url 'profile' %}">Личный кабинет</a></li>
+                            <li><a class="menu" href="{% url 'ssyl' %}">Ссылки</a></li>
+                        {% endif %}
+                    </ul>
+                </th>
+            </tr>
+        </table>
+    </header>
+
+    <div class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>Все права защищены &copy;</p>
+        <div class="social">
+          <div><i class="fab fa-youtube"></i></div>
+          <div><i class="fab fa-facebook-f"></i></div>
+          <div><i class="fab fa-twitter"></i></div>
+        </div>
+    </footer>
+        
+</body>
+</html>

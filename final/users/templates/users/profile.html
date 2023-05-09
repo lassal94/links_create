@@ -1,0 +1,21 @@
+{% extends 'links/base.html' %}
+
+{% block title %}
+    Кабинет пользователя
+{% endblock %}
+
+{% block content %}
+    <h1>Кабинет пользователя</h1>
+    <div class="cab">
+        <b class="user">@{{ user.username }}</b>
+        <b class="email">Email:</b> {{ user.email }}
+        <a class="exit" href="{% url 'exit' %}"><button class="but">Выход</button></a>
+    </div> 
+
+    <form method="post" class="form-edit">
+        {% csrf_token %} 
+        {{ updateUserForm.as_p }} 
+        <button class="but" type="submit">Обновить</button>
+    </form>
+
+{% endblock %}

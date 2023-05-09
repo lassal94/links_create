@@ -1,0 +1,15 @@
+{% extends 'links/base.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+    <h1>Сократим любые ссылки</h1>
+    <p>Быстро сократим любую длинную ссылку</p>
+    {% if user.is_authenticated %}
+        <a class="exit" href="{% url 'profile' %}"><button class="but">Кабинет пользователя</button></a>
+    {% else %}
+        <a class="exit" href="{% url 'auth' %}"><button class="but">Кабинет пользователя</button></a>
+    {% endif %}
+{% endblock %}

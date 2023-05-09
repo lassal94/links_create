@@ -1,0 +1,10 @@
+{% extends 'links/base.html' %}
+
+{% block title %}
+    Вы успешно вышли из аккаунта
+{% endblock %}
+
+{% block content %}
+    <h1>Вы успешно вышли из аккаунта</h1> 
+    <a class="enter" href="{% url 'auth' %}">Войти в личный кабинет</a>
+{% endblock %}

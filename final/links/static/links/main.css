@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    font-size: 14px;
+    height: 100%;
+}
+
+.menu { 
+    text-decoration: none;
+    font-size: 14px;
+    color:rgb(66, 43, 43);
+    font-weight: 400;
+}
+
+.head {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
+
+#logo p {
+    font-size: 30px;
+    font-weight: 600;
+    color:rgb(218, 78, 78);
+}
+
+#lst ul {list-style: none;}
+#lst ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.head .menu:hover {color:rgb(145, 55, 39);}
+
+.main {
+    font-weight: 600;
+    font-size: 20px;
+    padding-top: 15%;
+    z-index: 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+.main p, .main button {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+.but {
+    padding: 10px;
+    font-weight: 600;
+    color: white;
+    background-color: brown;
+    border-radius: 5px;
+    border: none;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+.exit {text-decoration: none;}
+
+.but:hover {
+    transform: scale(1.2);
+}
+
+.helps, .errorlist {
+    font-size: 12px;
+    font-weight: 400;
+    text-shadow: none;
+    color:#4d4c4c;
+    list-style-type: disc; /* так и не понял, почему не работает */
+}
+
+.form-control, .form-auth input {
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-edit {
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.form-edit-link .errorlist {display: none;}
+
+.cab, .enter {
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: none;
+    color:#4d4c4c;
+}
+
+.enter:hover {color:brown}
+
+.cab .user, .cab .but {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lnk {margin-top: 20px;}
+
+.lnk div {
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: none;
+    color:#4d4c4c;
+}
+
+.lnk a {
+    color:#880303;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.lnk a:hover {color: aqua;}
+
+footer {
+    width: 80%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  footer .up-btn,
+  footer .social div {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background: #eee;
+    border: 1px solid silver;
+    cursor: pointer;
+    color: #3b3b3b;
+    transition: transform 600ms ease;
+  }
+  
+  footer .up-btn:hover,
+  footer .social div:hover {
+    transform: translateY(-10px);
+  }
+  
+  footer .social div {
+    display: inline-block;
+    margin-left: 15px;
+  }

@@ -1,0 +1,15 @@
+{% extends 'links/base.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+    <h1>Страница авторизации</h1> 
+    <form method="post" class="form-auth">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="but" type="submit">Войти</button> <!-- обязательно submit -->
+    </form>
+    
+{% endblock %}

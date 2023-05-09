@@ -1,0 +1,24 @@
+{% extends 'links/base.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    <form method="post" class="form-edit-link">
+        {% csrf_token %} 
+        {{ form.as_p }}
+        {% if err %}
+            <p>Ссылка с таким сокращением уже существует</p>
+        {% endif %}
+        <button class="but" type="submit">Создать ссылку</button>
+    </form>
+
+    <h1>Доступные ссылки</h1>
+    <div class="lnk">
+        {% for link in links %}
+            <div>Ссылка - <a href="{{ link.full_url }}">{{ link.short_url }}</a></div>
+        {% endfor %}
+    </div>
+{% endblock %}
